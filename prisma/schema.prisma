@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Category {
+  X
+  Y
+  Z
+}
+
+model Loan {
+  id                        String   @id @default(uuid())
+  totalRequestedAmountCents Float
+  category                  Category
+  expiresAt                 String
+
+  Investment Investment[]
+  @@map("loan")
+}
+
+model Investment {
+  id                        String @id @default(uuid())
+  totalRequestedAmountCents Float
+  loan                      Loan   @relation(fields: [loanId], references: [id])
+  loanId                    String
+
+  @@map("investment")
+}
+
+model MarketplaceItem {
+  id                    String   @id @default(uuid())
+  totalRequestedAmount  Float
+  category              Category
+  totalInvestmentAmount Float
+  expiresAt             String
+
+  @@map("marketplaceItem")
+}
