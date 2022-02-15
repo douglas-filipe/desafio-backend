@@ -9,11 +9,9 @@ export class CreateLoanControler {
 
   @Post('/loans')
   async handle(@Body() input: ICreateLoanRequestDTO) {
-    // Utiliza um schema yup para verificar o input
     const isValidInput = yupCreateLoanInput.isValidSync(input);
 
-    // Caso seja inválido, retorna erro 400
-    if (!isValidInput) throw new BadRequestException('Seu input está inválido');
+    if (!isValidInput) throw new BadRequestException('Your input is invalid');
 
     return this.createLoanUseCase.execute(input);
   }

@@ -20,7 +20,7 @@ model Loan {
   expiresAt                 String
 
   Investment Investment[]
-  @@map("loan")
+
 }
 
 model Investment {
@@ -29,7 +29,7 @@ model Investment {
   loan                      Loan   @relation(fields: [loanId], references: [id])
   loanId                    String
 
-  @@map("investment")
+
 }
 
 model MarketplaceItem {
@@ -39,5 +39,5 @@ model MarketplaceItem {
   totalInvestmentAmount Float
   expiresAt             String
 
-  @@map("marketplaceItem")
+
 }

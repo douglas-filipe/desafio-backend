@@ -11,6 +11,17 @@ export class ILoanRepositories {
       orderBy: [{ category: 'desc' }, { expiresAt: 'asc' }],
     });
   }
+
+  findAllAndSome(input: Prisma.LoanWhereUniqueInput) {
+    return this.prismaService.loan.groupBy({
+      by: ['totalRequestedAmountCents'],
+      where: input,
+      _sum: {
+        totalRequestedAmountCents: true,
+      },
+    });
+  }
+
   findByUnique(input: Prisma.LoanWhereUniqueInput) {
     return this.prismaService.loan.findUnique({
       where: input,
