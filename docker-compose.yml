@@ -2,11 +2,15 @@ version: '3.9'
 
 services:
   db:
-    container_name: database
     image: 'postgres'
     ports:
       - 5432:5432
+    volumes:
+      - db_persdata:/var/lib/postgrespers
     environment:
       - POSTGRES_USER=douglas
       - POSTGRES_PASSWORD=teste
       - POSTGRES_DB=marketplace
+
+volumes:
+  db_persdata:

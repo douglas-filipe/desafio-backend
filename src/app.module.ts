@@ -5,6 +5,7 @@ import { PrismaModule } from './modules/prisma';
 import { AddToMarketplaceItemModule } from './useCases/AddToMarketplaceItem/AddToMarketplaceItem.module';
 import { CreateInvestmentModule } from './useCases/CreateInvestment/CreateInvestment.module';
 import { CreateLoanModule } from './useCases/CreateLoan/CreateLoan.module';
+import { ListAllInvestmentsModule } from './useCases/ListAllInvestments/ListAllInvestments.module';
 import { ListAllLoansModule } from './useCases/ListAllLoans/ListAllLoans.module';
 import { listAllMarketplaceItensModule } from './useCases/ListAllMarketplaceItens/ListAllMarketplaceItens.module';
 
@@ -16,6 +17,7 @@ import { listAllMarketplaceItensModule } from './useCases/ListAllMarketplaceIten
     CreateInvestmentModule,
     listAllMarketplaceItensModule,
     AddToMarketplaceItemModule,
+    ListAllInvestmentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
