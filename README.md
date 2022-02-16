@@ -4,7 +4,7 @@
 
 # Indice
 
-<a align="center" href="https://documenter.getpostman.com/view/16999074/UVkgxz8u">Link da documentação da api</a>
+<a align="center" href="https://documenter.getpostman.com/view/16999074/UVkgxz8u" target="_blank">Link da documentação da api</a>
 
 - [Sobre](#-sobre)
 - [Funcionalidades](#-funcionalidades)
