@@ -4,6 +4,8 @@
 
 # Indice
 
+<a align="center" href="https://documenter.getpostman.com/view/16999074/UVkgxz8u">Link da documentação da api</a>
+
 - [Sobre](#-sobre)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
@@ -12,8 +14,6 @@
 ## 🔖&nbsp; Sobre
 
 Neste desafio foi criado uma api, onde o usuário cadastra os empréstimos e investimentos, e depois é criado uma nova lista para exibir os empréstimos no marketplace.
-
-Documentação da api: https://documenter.getpostman.com/view/16999074/UVkgxz8u
 
 ---
 
@@ -55,10 +55,10 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
     $ yarn
 
     # Inicie o docker compose
-    docker-compose up -d
+    $ docker-compose up -d
 
     # Rode o comando de migrate para criar as tabelas no banco de dados:
-    npx prisma migrate dev
+    $ npx prisma migrate dev
 
     # Iniciar o projeto
     $ yarn start:dev
