@@ -16,7 +16,7 @@
 
 ## 🔖&nbsp; Sobre
 
-Neste desafio foi criado uma api, onde o usuário cadastra os empréstimos e investimentos, e depois é criado uma nova lista para exibir os empréstimos no marketplace.
+Neste desafio foi criado uma api utilizando os princípios de SOLID, onde o usuário cadastra os empréstimos e investimentos, e depois é criado uma nova lista para exibir os empréstimos no marketplace.
 
 ---
 
