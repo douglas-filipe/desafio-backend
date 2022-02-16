@@ -1,22 +1,5 @@
-/*
-  Warnings:
-
-  - You are about to drop the `investment` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `loan` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `marketplaceItem` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropForeignKey
-ALTER TABLE "investment" DROP CONSTRAINT "investment_loanId_fkey";
-
--- DropTable
-DROP TABLE "investment";
-
--- DropTable
-DROP TABLE "loan";
-
--- DropTable
-DROP TABLE "marketplaceItem";
+-- CreateEnum
+CREATE TYPE "Category" AS ENUM ('X', 'Y', 'Z');
 
 -- CreateTable
 CREATE TABLE "Loan" (

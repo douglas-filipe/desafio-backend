@@ -1,5 +1,5 @@
 <h1 align="center">
-    Desafio Backend EUNERD
+    Desafio Backend - EUNERD
 <h1 >
 
 # Indice
@@ -21,10 +21,11 @@ Documentação da api: https://documenter.getpostman.com/view/16999074/UVkgxz8u
 
 - [x] Usuário cadastra empréstimos
 - [x] Listagem dos empréstimos
-- [X] Usuário cadastra investimentos de acordo com o ID do empréstimo
-- [X] Listagem dos investimentos
-- [X] Cadastro do empréstimo no marketplace
-- [X] Listagens dos itens do marketplace
+- [x] Usuário cadastra investimentos de acordo com o ID do empréstimo
+- [x] Listagem dos investimentos
+- [x] Cadastro de empréstimos no marketplace
+- [x] Listagens dos itens no marketplace
+
 ---
 
 ## 🚀 Tecnologias utilizadas
@@ -45,19 +46,22 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 ```bash
 
     # Clonar o repositório
-    $ git clone https://gitlab.com/douglas_filipe/entrega_6
+    $ git clone git@github.com:douglas-filipe/desafio-backend.git
 
     # Entrar no diretório
-    $ cd entrega_6
-
-    # Renomeio o arquivo .env_example para .env
-    # Insira suas variáveis de ambiente no .env
+    $ cd desafio-backend
 
     # Instalar as dependências
     $ yarn
 
+    # Inicie o docker compose
+    docker-compose up -d
+
+    # Rode o comando de migrate para criar as tabelas no banco de dados:
+    npx prisma migrate dev
+
     # Iniciar o projeto
-    $ yarn dev
+    $ yarn start:dev
 ```
 
 ---
